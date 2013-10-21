@@ -17,6 +17,6 @@ Exactamente lo que necesitábamos para la primera opción, activando esto era po
 La opción para _sysctl.conf_ que hace la magia es:
 
 ```
-    net.ipv4.ip_nonlocal_bind = 1
+net.ipv4.ip_nonlocal_bind = 1
 ```
 Y con esto ya funcionara el cacharro :-)
