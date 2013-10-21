@@ -8,7 +8,7 @@ DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
 production = 'pperez@alumnos.informatica.utem.cl:22'
-dest_path = '~/public_html/test'
+dest_path = '~/public_html'
 
 # Rackspace Cloud Files configuration settings
 env.cloudfiles_username = 'my_rackspace_username'

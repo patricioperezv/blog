@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Patricio Pérez'
 AUTHOR_EMAIL = 'patricio.perez@ceinf.cl'
 SITENAME = u"pato's corner"
-SITEURL = ''
+SITEURL = 'http://alumnos.informatica.utem.cl/~pperez'
 SITETAGLINE = 'Geeky bastard y algo busquilla'
 SITEDESCR = 'Cosas que considero entretes, a veces me equivoco (?)'
 
