@@ -1,5 +1,5 @@
 layout: post
-title: "Teclado latam en mac"
+title: Teclado latam en mac
 date: 2013-01-25 20:27
 comments: true
 categories: Mac

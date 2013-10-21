@@ -1,5 +1,5 @@
 layout: post
-title: "Proyectos proyectos proyectos"
+title: Proyectos proyectos proyectos
 date: 2013-06-10 00:01
 comments: true
 categories: Proyectos

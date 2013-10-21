@@ -1,5 +1,5 @@
 layout: post
-title: "Binding a dirección no local en linux"
+title: Binding a dirección no local en linux
 date: 2013-01-01 19:00
 comments: true
 categories: Sysadmin

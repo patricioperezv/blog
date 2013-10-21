@@ -1,5 +1,5 @@
 layout: post
-title: "Oh el ocio!"
+title: Oh el ocio!
 date: 2013-06-14 21:34
 comments: true
 categories: Python

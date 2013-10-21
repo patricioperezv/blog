@@ -1,5 +1,5 @@
 layout: post
-title: "Arreglando las quotas de muchos usuarios"
+title: Arreglando las quotas de muchos usuarios
 date: 2013-01-09 17:14
 comments: true
 categories: Sysadmin
