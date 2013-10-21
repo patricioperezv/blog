@@ -2,7 +2,7 @@ layout: post
 title: Oh el ocio!
 date: 2013-06-14 21:34
 comments: true
-categories: Python
+category: Python
 
 [janitux@TSP](https://github.com/pperez/tsp)
 (O como malgasto mi tiempo con los trabajos de analisis!) ;)

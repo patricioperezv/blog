@@ -2,7 +2,7 @@ layout: post
 title: Binding a dirección no local en linux
 date: 2013-01-01 19:00
 comments: true
-categories: Sysadmin
+category: Sysadmin
 
 En el trabajo teníamos un cacho, como hacíamos que nginx respondiera a una ip que no estaba asignada a la maquina, teniamos dos soluciones al ojo:
 

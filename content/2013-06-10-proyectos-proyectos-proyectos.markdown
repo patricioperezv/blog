@@ -2,7 +2,7 @@ layout: post
 title: Proyectos proyectos proyectos
 date: 2013-06-10 00:01
 comments: true
-categories: Proyectos
+category: Proyectos
 
 Tratando de aprovechar un poquito más estas semanas de paro, me he puesto a trabajar con mi colega Seba en los \<multiples\> pendientes que tenemos, ya tenemos avanzados un par :D
 

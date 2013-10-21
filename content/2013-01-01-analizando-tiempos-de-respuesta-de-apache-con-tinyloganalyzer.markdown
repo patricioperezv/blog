@@ -2,7 +2,7 @@ layout: post
 title: Analizando tiempos de respuesta de apache con TinyLogAnalyzer
 date: 2013-01-01 20:21
 comments: true
-categories: Sysadmin
+category: Sysadmin
 
 Para cierto sitio necesitábamos ver algunas estadísticas de tiempos de respuesta de este, detectar donde se pegaba más tiempo (O sea donde ponerle _amol_).  
 [César](http://twitter.com/csepulvedab "César") pillo uno ([apache-response-time](http://code.google.com/p/apache-response-time/) "Apache Response Time"), pero no andaba ni para atrás, asi que googleando un rato llegamos a [TinyLogAnalyzer](http://pypi.python.org/pypi/TinyLogAnalyzer), que esta hecho en python y funciona impecable.  
