@@ -1,4 +1,6 @@
+from __future__ import print_function
 from fabric.api import *
+from utilities import new_post as __new_post
 import fabric.contrib.project as project
 import os
 
@@ -48,6 +50,17 @@ def cf_upload():
           '-U {cloudfiles_username} '
           '-K {cloudfiles_api_key} '
           'upload -c {cloudfiles_container} .'.format(**env))
+
+def new():
+    if 'titulo' not in env: # El titulo es obligatorio po
+        print('Ingrese titulo del post')
+        env.titulo = raw_input('>>> ')
+    if 'fecha' in env: # Paso una fecha, la parseara!
+        __new_post(env.titulo, env.fecha)
+    else: # Fecha por defecto
+        __new_post(env.titulo)
+    
+
 
 @hosts(production)
 def publish():

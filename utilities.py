@@ -2,13 +2,16 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+import dateutil.parser
 import datetime
 import os
 from slugify import slugify
 
-now = datetime.datetime.now() # Fecha/tiempo actual
-
-def new_post(titulo, fecha = now):
+def new_post(titulo, fecha = None):
+    if fecha is None:
+        fecha = datetime.datetime.now() # Fecha/tiempo actual
+    else:
+        fecha = dateutil.parser.parse(fecha) # Trata de parsear la fecha, probablemente deba capturar la excepcion
     template = '''title: {titulo}\ndate: {fecha}\ncategory: misc'''
     
     slug = slugify(titulo) # Hacemos un slug, reemplaza espacios, caracteres extraños y demases
@@ -25,6 +28,5 @@ def new_post(titulo, fecha = now):
         with open(fichero, 'w') as f:
             f.write(template.format(titulo = titulo, fecha = stamp_md))
         print('Se creo el nuevo post', fichero)
-        os.system('mate ' + fichero)
-
-new_post('Prueba blog')
+        ed = os.getenv('EDITOR') if os.getenv('EDITOR') else 'mate'
+        os.system('{editor} {fichero}'.format(editor = ed, fichero = fichero))
