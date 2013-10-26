@@ -19,20 +19,23 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Seba', 'http://alumnos.informatica.utem.cl/~srocha/'),
-          ('Python.org', 'http://python.org/'),)
+LINKS = [
+    ('Seba', 'http://alumnos.informatica.utem.cl/~srocha/'),
+    ('Python.org', 'http://python.org/')
+]
 
 # Social widget
 # SOCIAL = (('You can add links in your config file', '#'),
 #           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+SUMMARY_MAX_LENGTH = 200
 
 THEME = 'lannisport'
 TYPOGRIFY = True
 PATH = 'content'
 
-STATIC_PATHS = ['images']
+# STATIC_PATHS = ['images']
 
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
