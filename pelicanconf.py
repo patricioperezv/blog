@@ -31,7 +31,7 @@ LINKS = [
 DEFAULT_PAGINATION = 10
 SUMMARY_MAX_LENGTH = 200
 
-THEME = 'lannisport'
+THEME = 'SoMA'
 TYPOGRIFY = True
 PATH = 'content'
 
