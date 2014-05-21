@@ -3,6 +3,7 @@ from fabric.api import *
 from utilities import new_post as __new_post
 import fabric.contrib.project as project
 import os
+import datetime
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
@@ -51,15 +52,16 @@ def cf_upload():
           '-K {cloudfiles_api_key} '
           'upload -c {cloudfiles_container} .'.format(**env))
 
-def new():
-    if 'titulo' not in env: # El titulo es obligatorio po
+def new_post(title = None, date = None):
+    if title is None: # El titulo es obligatorio po!
         print('Ingrese titulo del post')
-        env.titulo = raw_input('>>> ')
-    if 'fecha' in env: # Paso una fecha, la parseara!
-        __new_post(env.titulo, env.fecha)
-    else: # Fecha por defecto
-        __new_post(env.titulo)
-    
+        title = raw_input('>>> ')
+    if date is None: # No paso una fecha, utilizar la fecha por defecto
+        __new_post(title)
+    else: # Paso una fecha, que la funcion se encargue de checkearla
+        __new_post(title, date)
+
+
 
 
 @hosts(production)
