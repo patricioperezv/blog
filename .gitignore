@@ -40,4 +40,3 @@ nosetests.xml
 
 # Pelican
 output
-pelican-plugins
