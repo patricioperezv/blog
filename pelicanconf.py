@@ -44,7 +44,7 @@ ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 RELATIVE_URLS = True
 
 # Plugins
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'pelican_gist'
            ]
