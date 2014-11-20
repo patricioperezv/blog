@@ -16,11 +16,12 @@ En fin, vi a muchos sufriendo con la instalación del framework, otros hasta llo
 3. Instalar composer:
 
     ```wget -O- https://getcomposer.org/installer | php```
+
     ```sudo mv composer.phar /usr/local/bin/composer```
 
 4. Agregar el directorio bin de composer al PATH, agregamos la siguiente línea al final de .bashrc o .zshrc:
 
-  ```export PATH="~/.composer/vendor/bin:$PATH"```
+    ```export PATH="~/.composer/vendor/bin:$PATH"```
 
 3. Instalar el _instalador_ de laravel, este nos permite crear una estructura básica para un proyecto:
 
