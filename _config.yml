@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Blog de pato
+subtitle: Los pequeños detalles son las cosas infinitamente más importantes
 description:
-author: John Doe
-email:
-language:
+author: Patricio Pérez
+email: pperez@boaboa.org
+language: es
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://alumnos.informatica.utem.cl/~pperez
+root: /~pperez/
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
@@ -26,7 +26,7 @@ source_dir: source
 public_dir: public
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -85,4 +85,11 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: alumnos.informatica.utem.cl
+  user: pperez
+  root: ~/public_html/
+  port: 22
+  delete: false
+  verbose: true
+  ignore_errors: false
