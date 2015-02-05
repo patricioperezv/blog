@@ -43,11 +43,11 @@ laravel new blogsito
 
 Aquí ya tendremos la estructura del proyecto creada en el directorio `blogsito` :)
 
-![Nailed! ... Almost](http://alumnos.informatica.utem.cl/~pperez/images/new_project_l4rocks.png)
+{% asset_img new_project_l4rocks.png 'Nailed! ... Almost' %}
 
 ### Mcrypt PHP extension required
 
-![Mcrypt PHP extension required :(](http://alumnos.informatica.utem.cl/~pperez/images/mcrypt_fail.png)
+{% asset_img mcrypt_fail.png 'Mcrypt PHP extension required :(' %}
 
 Un problema que se presenta al intentar correr cualquier cosa con *artisan* (La interfaz de linea de comandos de laravel, **MUY** útil!) es que no anda ni pa' atrás! y el WTF se escucha a lo lejos: Por que me reclamai si ya te instale el `php5-mcrypt`!
 
@@ -60,7 +60,7 @@ sudo php5enmod mcrypt
 
 deberíamos estar *casi* listos para desarrollar:
 
-![Ahora si ... Nailed!](http://alumnos.informatica.utem.cl/~pperez/images/finally_nailed.png)
+{% asset_img finally_nailed.png 'Ahora si ... Nailed!' %}
 
 Como detalle, encuentro que es una pérdida de tiempo marearse instalando apache para cosas tan infimas, así que uso directamente el servidor integrado de laravel, este por defecto levanta un server web corriendo la app en localhost por el puerto 8000 y se invoca con
 
@@ -68,7 +68,7 @@ Como detalle, encuentro que es una pérdida de tiempo marearse instalando apache
 php artisan serve
 ```
 
-![You have arrived!](http://alumnos.informatica.utem.cl/~pperez/images/working_l4rocks.png)
+{% asset_img working_l4rocks.png 'You have arrived!' %}
 
 ## Como olvidar la base de datos!
 
@@ -104,4 +104,4 @@ sudo -u postgres createdb l4rocks
 php artisan migrate
 ```
 
-![All is good ;)](http://alumnos.informatica.utem.cl/~pperez/images/dbworkingl4.png)
+{% asset_img dbworkingl4.png 'All is good ;)' %}
