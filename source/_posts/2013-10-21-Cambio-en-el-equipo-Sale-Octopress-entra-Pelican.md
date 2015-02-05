@@ -1,5 +1,5 @@
+title: "Cambio en el equipo: Sale Octopress, entra Pelican"
 date: 2013-10-21 03:08:15
-title: Cambio en el equipo: Sale Octopress, entra Pelican
 category: Python
 ---
 He estado horas y horas migrando desde [octopress](http://octopress.org/) a [pelican](http://getpelican.com/), debo admitir que no fue coser y cantar como pense que seria ... pero uta que vale la pena tener a tu fiel compañero python aca.
