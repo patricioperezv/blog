@@ -2,10 +2,10 @@
 menu:
   Home: /
   Archives: /archives
-rss: /atom.xml
+rss: rss.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: Seguir leyendo
 fancybox: true
 
 # Sidebar
@@ -20,7 +20,7 @@ widgets:
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
-twitter:
+twitter: janitux
 google_plus:
 fb_admins:
 fb_app_id:

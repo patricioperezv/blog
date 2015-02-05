@@ -23,7 +23,8 @@ permalink_defaults:
 
 # Feed
 feed:
-  type: atom
+  type: rss2
+  path: rss.xml
 
 # Directory
 source_dir: source
