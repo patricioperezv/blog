@@ -9,13 +9,13 @@ Para cierto sitio necesitábamos ver algunas estadísticas de tiempos de respues
 El proceso seria el siguiente:
 
 * Agregar `%T/%D` al LogFormat de apache (Así registrara los tiempos de respuesta, en microsegundos)
-* Instalar tinyloganalyzer, pan comido usando pip: ```sudo pip install tinyloganalyzer```
+* Instalar tinyloganalyzer, pan comido usando pip: `sudo pip install tinyloganalyzer`
 * Obviamente un reinicio a apache: `sudo /etc/init.d/apache2 restart`
 * Ejecutar tinylogan: `tinylogan /var/log/apache2/access.log`
 
 _Esto ya es otra cosa_, como me imagino que todos usan vhosts, y querrán estar ojeando estos "reportes" antes de que logrotate se cepille los logs es por esto que pasamos a usar un pequeño script (Aprovechando que estoy dando jugo con python) y cron:
 
-[gist:id=4431051]
+{% gist 4431051 %}
 
 Finalmente lo agregamos al crontab:
 
