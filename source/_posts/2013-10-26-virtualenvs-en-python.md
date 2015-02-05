@@ -11,6 +11,7 @@ La idea la encontré bien chora, y fue genial cachar que en python existía esto
 
 La receta del chef de hoy dice como instalar virtualenvwrapper (Un wrapper del virtualenv original) y un par de comandos.
 
+
 ### Manos a la obra ###
 
 Un requerimiento previo es la instalación de [pip](http://www.pip-installer.org/) (El manejador de paquetes de python que la lleva) y [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org), estos deben ir a nivel de sistema para permitir que nuestros usuarios jueguen tranquilos con sus nuevos entornos.

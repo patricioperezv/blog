@@ -6,6 +6,8 @@ Afortunadamente en cierto curso de ingenieria en software en cierta [universidad
 
 En fin, vi a muchos sufriendo con la instalación del framework, otros hasta llorando y dandole hijos a <del>diablo</del> [Codeigniter](http://codeigniter.com), asi que me decidí y hacer un quickstart para quedar trabajando rápidamente con laravel 4 en la última versión estable de Ubuntu (14.04 LTS al momento de escribir este post).
 
+<!-- more -->
+
 ## Pasos
 
 * Lo primero que necesitamos obviamente es una maquina con Ubuntu 14.04...
