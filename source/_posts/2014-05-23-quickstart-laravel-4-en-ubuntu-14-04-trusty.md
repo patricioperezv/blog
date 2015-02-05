@@ -8,56 +8,67 @@ En fin, vi a muchos sufriendo con la instalación del framework, otros hasta llo
 
 ## Pasos
 
-1. Lo primero que necesitamos obviamente es una maquina con Ubuntu 14.04...
-2. Instalar los siguientes paquetes básicos para php5 y un par de librerías requeridas por laravel:
+* Lo primero que necesitamos obviamente es una maquina con Ubuntu 14.04...
+* Instalar los siguientes paquetes básicos para php5 y un par de librerías requeridas por laravel:
+```bash
+sudo apt-get install php5-curl php5-mcrypt php5-cli
+```
 
-    ```sudo apt-get install php5-curl php5-mcrypt php5-cli```
+* Instalar composer:
 
-3. Instalar composer:
+```bash
+wget -O- https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+```
 
-    ```wget -O- https://getcomposer.org/installer | php```
+* Agregar el directorio bin de composer al PATH, agregamos la siguiente línea al final de .bashrc o .zshrc:
 
-    ```sudo mv composer.phar /usr/local/bin/composer```
+```bash
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+```
 
-4. Agregar el directorio bin de composer al PATH, agregamos la siguiente línea al final de .bashrc o .zshrc:
+* Instalar el _instalador_ de laravel, este nos permite crear una estructura básica para un proyecto:
 
-    ```export PATH="~/.composer/vendor/bin:$PATH"```
+```bash
+composer global require "laravel/installer=~1.1"
+```
 
-3. Instalar el _instalador_ de laravel, este nos permite crear una estructura básica para un proyecto:
+* Recargamos la consola
 
-    ```composer global require "laravel/installer=~1.1"```
+* Usamos el comando laravel para generar un nuevo proyecto:
 
-4. Recargamos la consola
+```bash
+laravel new blogsito
+```
 
-5. Usamos el comando laravel para generar un nuevo proyecto:
+Aquí ya tendremos la estructura del proyecto creada en el directorio `blogsito` :)
 
-    ```laravel new blogsito```
+![Nailed! ... Almost](http://alumnos.informatica.utem.cl/~pperez/images/new_project_l4rocks.png)
 
-Aquí ya tendremos la estructura del proyecto creada en el directorio ```blogsito``` :)
+### Mcrypt PHP extension required
 
-{% img http://alumnos.informatica.utem.cl/~pperez/images/new_project_l4rocks.png Nailed! ... Almost %}
+![Mcrypt PHP extension required :(](http://alumnos.informatica.utem.cl/~pperez/images/mcrypt_fail.png)
 
-## Mcrypt PHP extension required
+Un problema que se presenta al intentar correr cualquier cosa con *artisan* (La interfaz de linea de comandos de laravel, **MUY** útil!) es que no anda ni pa' atrás! y el WTF se escucha a lo lejos: Por que me reclamai si ya te instale el `php5-mcrypt`!
+
+Lo que sucede es que en esta versión de Ubuntu los modulos de php deben ser habilitadas explicitamente, utilizando `php5enmod` (Del mismo estilo de `a2enmod` usado para los módulos de apache), por lo que usando el siguiente comando:
 
 
-{% img http://alumnos.informatica.utem.cl/~pperez/images/mcrypt_fail.png Mcrypt PHP extension required :( %}
-
-Un problema que se presenta al intentar correr cualquier cosa con *artisan* (La interfaz de linea de comandos de laravel, **MUY** útil!) es que no anda ni pa' atrás! y el WTF se escucha a lo lejos: Por que me reclamai si ya te instale el ```php5-mcrypt```!
-
-Lo que sucede es que en esta versión de Ubuntu los modulos de php deben ser habilitadas explicitamente, utilizando ```php5enmod``` (Del mismo estilo de ```a2enmod``` usado para los módulos de apache), por lo que aplicando
-
-```sudo php5enmod mcrypt```
+```bash
+sudo php5enmod mcrypt
+```
 
 deberíamos estar *casi* listos para desarrollar:
 
-{% img http://alumnos.informatica.utem.cl/~pperez/images/finally_nailed.png Ahora si ... Nailed! %}
-
+![Ahora si ... Nailed!](http://alumnos.informatica.utem.cl/~pperez/images/finally_nailed.png)
 
 Como detalle, encuentro que es una pérdida de tiempo marearse instalando apache para cosas tan infimas, así que uso directamente el servidor integrado de laravel, este por defecto levanta un server web corriendo la app en localhost por el puerto 8000 y se invoca con
 
-```php artisan serve```
+```bash
+php artisan serve
+```
 
-{% img http://alumnos.informatica.utem.cl/~pperez/images/working_l4rocks.png You have arrived! %}
+![You have arrived!](http://alumnos.informatica.utem.cl/~pperez/images/working_l4rocks.png)
 
 ## Como olvidar la base de datos!
 
@@ -68,21 +79,29 @@ Personalmente estoy usando postgres:
 
 1. Instalar postgres:
 
-    ```sudo apt-get install postgresql-9.3```
+```bash
+sudo apt-get install postgresql-9.3
+```
 
 2. Instalar la extensión postgres para PHP:
 
-    ```sudo apt-get install php5-pgsql```
+```bash
+sudo apt-get install php5-pgsql
+```
 
 3. Crear el usuario y la db (Reemplazar l4rocks por lo que quieran :) ):
 
-    ```sudo -u postgres createuser --no-superuser --pwprompt l4rocks```
+```bash
+sudo -u postgres createuser --no-superuser --pwprompt l4rocks
+sudo -u postgres createdb l4rocks
+```
 
-    ```sudo -u postgres createdb l4rocks```
+4. Configurar laravel para utilizar esta db, el fichero en cuestion es `app/config/database.php` y es bastante sencillo, la directiva `default` indica que conexión se utilizará por defecto, las definiciones de las conexiones se encuentran más abajo en el fichero.
 
-4. Configurar laravel para utilizar esta db, el fichero en cuestion es ```app/config/database.php```y es bastante sencillo, la directiva ```default``` indica que conexión se utilizará por defecto, las definiciones de las conexiones se encuentran más abajo en el fichero.
 5. Probar:
 
-    ```php artisan migrate```
+```bash
+php artisan migrate
+```
 
-{% img http://alumnos.informatica.utem.cl/~pperez/images/dbworkingl4.png All is good ;) %}
+![All is good ;)](http://alumnos.informatica.utem.cl/~pperez/images/dbworkingl4.png)
