@@ -2,6 +2,9 @@ title: Quickstart Laravel 4 en Ubuntu 14.04 Trusty
 date: 2014-05-23 23:20:45
 category: linux
 ---
+
+**UPDATE[Feb 14/2015]**: Con la actualización a laravel 5, el instalador de laravel instala la versión 5 del framework, por lo que he actualizado las instrucciones para que se instale la versión 4.2; No veo muchos cambios entre ambas versiones en la instalación del framework, asi que este articulo debería servirles para laravel 5 tambien.
+
 Afortunadamente en cierto curso de ingenieria en software en cierta [universidad](http://utem.cl) el [profe](http://sebastian.cl) los esta <del>obligando</del> haciendo usar [Laravel](http://laravel.com), este es un framework que me agrada mucho (Si bien esta escrito en *PHP*, ese lenguaje tan alejado de la mano de dios como decimos con [Fernando](http://alumnos.informatica.utem.cl/~frubilar), hace *mucho* más agradable la experiencia de desarrollo).
 
 En fin, vi a muchos sufriendo con la instalación del framework, otros hasta llorando y dandole hijos a <del>diablo</del> [Codeigniter](http://codeigniter.com), asi que me decidí y hacer un quickstart para quedar trabajando rápidamente con laravel 4 en la última versión estable de Ubuntu (14.04 LTS al momento de escribir este post).
@@ -29,21 +32,15 @@ sudo mv composer.phar /usr/local/bin/composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 ```
 
-* Instalar el _instalador_ de laravel, este nos permite crear una estructura básica para un proyecto:
+* Crear el proyecto usando composer:
 
-```bash
-composer global require "laravel/installer=~1.1"
-```
+~~~bash
+composer create-project laravel/laravel l4rocks --prefer-dist 4.2
+~~~
 
-* Recargamos la consola
+**Nota**: Si desean usar la última versión del framework (5.0 al momento de escribir este update), pueden quitar el `--prefer-dist 4.2`
 
-* Usamos el comando laravel para generar un nuevo proyecto:
-
-```bash
-laravel new blogsito
-```
-
-Aquí ya tendremos la estructura del proyecto creada en el directorio `blogsito` :)
+Aquí ya tendremos la estructura del proyecto creada en el directorio `l4rocks` :)
 
 {% asset_img new_project_l4rocks.png 'Nailed! ... Almost' %}
 
