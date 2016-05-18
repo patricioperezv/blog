@@ -11,6 +11,12 @@ email: pperez@boaboa.org
 language: es-419
 timezone: America/Santiago
 
+# RSS
+feed:
+  type: rss2
+  path: rss.xml
+  limit: false
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://alumnos.informatica.utem.cl/~pperez
